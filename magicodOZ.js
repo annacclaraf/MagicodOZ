@@ -1,48 +1,47 @@
-
-const personagens = [
-  {
-    nome: "Dorothy",
-    imagem: "imgs/Dorothy Gale (Judy Garland).jpg",
-    detalhe: "Dorothy Gale é uma jovem do Kansas que é levada por um tornado para a Terra de Oz. Durante sua jornada, ela aprende sobre amizade, coragem e descobre que não há lugar como o lar."
+const personagensData = [
+  { 
+    nome: "Dorothy", 
+    imagem: "imgs/Dorothy Gale (Judy Garland).jpg", 
+    descricao: "Dorothy é uma menina corajosa e determinada de Kansas, que é levada por um tornado para a Terra de Oz. Ela busca encontrar o Mágico para voltar para casa, enfrentando desafios e fazendo grandes amizades pelo caminho." 
   },
-  {
-    nome: "Espantalho",
-    imagem: "imgs/espantalho.jpg",
-    detalhe: "O Espantalho sonha em ter um cérebro, mas ao longo da jornada mostra criatividade e inteligência, provando que já tinha o que desejava."
+  { 
+    nome: "Espantalho", 
+    imagem: "imgs/espantalho.jpg", 
+    descricao: "O Espantalho é um amigo leal de Dorothy que deseja ter um cérebro. Apesar de se sentir inseguro sobre sua inteligência, ele demonstra criatividade, coragem e muito coração durante a jornada." 
   },
-  {
-    nome: "Homem de Lata",
-    imagem: "imgs/homemdelatajpg.jpg",
-    detalhe: "O Homem de Lata acredita que precisa de um coração, mas demonstra sensibilidade e bondade, mostrando que já possuía sentimentos verdadeiros."
+  { 
+    nome: "Homem de Lata", 
+    imagem: "imgs/homemdelatajpg.jpg", 
+    descricao: "O Homem de Lata é um personagem gentil e amigo, que busca um coração. Sua lealdade e bondade conquistam todos ao seu redor, mostrando que a compaixão é mais importante do que a aparência." 
   },
-  {
-    nome: "Leão Covarde",
-    imagem: "imgs/leao.jpg",
-    detalhe: "O Leão acredita ser covarde, mas descobre que a verdadeira coragem está em enfrentar seus medos e lutar ao lado dos amigos."
+  { 
+    nome: "Leão Covarde", 
+    imagem: "imgs/leao.jpg", 
+    descricao: "O Leão Covarde deseja ter coragem, mas ao longo da história descobre sua força interior. Ele é leal e protetor, tornando-se um grande companheiro de Dorothy e seus amigos." 
   },
-  {
-    nome: "Bruxa Má do Oeste",
-    imagem: "imgs/bruxamaoeste.jpg",
-    detalhe: "A Bruxa Má do Oeste é a principal vilã da história. Ela deseja se vingar de Dorothy e de seus amigos, usando sua magia sombria para tentar impedir que cheguem ao Mágico de Oz."
+  { 
+    nome: "Bruxa Má do Oeste", 
+    imagem: "imgs/bruxamaoeste.jpg", 
+    descricao: "A Bruxa Má do Oeste é a principal antagonista, que tenta impedir Dorothy de retornar para casa. Ela é poderosa e astuta, mas também demonstra momentos de fragilidade e obsessão pelo poder." 
   },
-  {
-    nome: "Glinda (A Bruxa Boa)",
-    imagem: "imgs/glinda.jpg",
-    detalhe: "Glinda é a Bruxa Boa do Norte, uma figura bondosa que guia Dorothy em sua jornada e a ajuda a descobrir como voltar para casa."
+  { 
+    nome: "Glinda", 
+    imagem: "imgs/glinda.jpg", 
+    descricao: "Glinda é a boa bruxa do Norte, sábia e benevolente. Ela ajuda Dorothy a compreender a importância da coragem, amizade e esperança, guiando-a para tomar decisões importantes." 
   },
-  {
-    nome: "Totó",
-    imagem: "imgs/toto.jpg",
-    detalhe: "Totó é o fiel cachorro de Dorothy. Ele a acompanha em todas as aventuras, sendo um símbolo de lealdade e coragem mesmo em meio aos perigos da Terra de Oz."
+  { 
+    nome: "Totó", 
+    imagem: "imgs/toto.jpg", 
+    descricao: "Totó é o cãozinho fiel de Dorothy. Pequeno, mas corajoso, ele acompanha sua dona em todas as aventuras, mostrando lealdade e amor incondicional." 
   }
 ];
 
 
-function criarPersonagem(personagem) {
-  const container = document.getElementById("lista-personagens");
+const personagens = document.getElementById("personagens");
 
-  const div = document.createElement("div");
-  div.classList.add("personagem");
+personagensData.forEach((personagem, index) => {
+  const card = document.createElement("div");
+  card.classList.add("card-personagem");
 
   const img = document.createElement("img");
   img.src = personagem.imagem;
@@ -50,26 +49,25 @@ function criarPersonagem(personagem) {
 
   const nome = document.createElement("h3");
   nome.textContent = personagem.nome;
-  nome.onclick = () => mostrarDetalhes(personagem);
 
-  div.appendChild(img);
-  div.appendChild(nome);
+  const botao = document.createElement("button");
+  botao.textContent = "Mais Detalhes";
+  botao.addEventListener("click", () => {
+    const info = document.getElementById("info-personagem");
+    info.innerHTML = `
+      <h3>${personagem.nome}</h3>
+      <img src="${personagem.imagem}" alt="${personagem.nome}" style="width:150px; display:block; margin-bottom:10px;">
+      <p>${personagem.descricao}</p>
+    `;
+  });
 
-  container.appendChild(div);
-}
+  card.appendChild(img);
+  card.appendChild(nome);
+  card.appendChild(botao);
 
-function mostrarDetalhes(personagem) {
-  const info = document.getElementById("info-personagem");
-  info.innerHTML = `
-    <h3>${personagem.nome}</h3>
-    <p>${personagem.detalhe}</p>
-  `;
-  document.getElementById("detalhes-personagem").scrollIntoView({behavior: "smooth"});
-}
+  if (index === 4) card.style.gridColumnStart = 2;
+  if (index === 5) card.style.gridColumnStart = 3;
+  if (index === 6) card.style.gridColumnStart = 4;
 
-
-function carregarPersonagens() {
-  personagens.forEach(criarPersonagem);
-}
-
-window.onload = carregarPersonagens;
+  personagens.appendChild(card);
+});
