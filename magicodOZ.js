@@ -21,7 +21,7 @@ const personagensData = [
   },
   { 
     nome: "Bruxa Má do Oeste", 
-    imagem: "imgs/bruxamaoeste.jpg", 
+    imagem: "imgs/Margaret Hamilton.jpg", 
     descricao: "A Bruxa Má do Oeste é a principal antagonista, que tenta impedir Dorothy de retornar para casa. Ela é poderosa e astuta, mas também demonstra momentos de fragilidade e obsessão pelo poder." 
   },
   { 
