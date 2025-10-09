@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>O Mágico de Oz</title>
- <link rel="icon" href="imgs/favicon.png" type="image/png">
-
-  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="imgs/logo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilo.css" />
 </head>
-
 <body>
 
-  <header>
+  <div class="cabecalho">
     <h1>O Mágico de Oz</h1>
-  </header>
+  </div>
 
-  <section class="apresentacao">
+  <div class="introducao">
     <h2>Sobre o Filme</h2>
     <p>
       "O Mágico de Oz" é um clássico da literatura e do cinema que conta a história de Dorothy, uma jovem do Kansas que é levada por um tornado para a mágica Terra de Oz.
-       Nessa terra fantástica, ela conhece amigos especiais: o Espantalho, o Homem de Lata e o Leão Covarde e juntos embarcam em uma jornada para encontrar o Mágico de Oz, que pode ajudá-la a voltar para casa. Ao longo do caminho, enfrentam desafios, conhecem vilões e aprendem lições sobre amizade, coragem e esperança.
+       Nessa terra fantástica, ela conhece amigos especiais e juntos embarcam em uma jornada para encontrar o Mágico de Oz, enfrentando desafios e aprendendo sobre amizade, coragem e esperança.
     </p>
-  </section>
+  </div>
 
-  <section class="personagens">
-    <h2>Personagens Principais</h2>
-    <div id="personagens" class="galeria"></div>
-  </section>
+  <div class="titulo-personagens">
+    <h2>Personagens</h2>
+  </div>
 
+  <div class="personagens"></div>
 
-  <section id="detalhes-personagem">
-    <h2>Detalhes do Personagem</h2>
-    <div id="info-personagem"></div>
-  </section>
+  <div class="descricao-container">
+    <h3>Descrição dos Personagens</h3>
+    <p class="descricao"></p>
+  </div>
 
-
-  <script src="magicodOZ.js"></script>
+<script src="magicodOZ.js" defer></script>
 
 </body>
 </html>

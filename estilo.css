@@ -1,122 +1,82 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #f4f4f4;
+  margin: 0; padding: 0;
 }
 
-header {
-  background-color: #8ecae6; 
-  padding: 20px 0; 
+.cabecalho {
+  background-color: #8ecae6;
+  color: white;
+  padding: 20px;
   text-align: center;
 }
 
-
-header h1 {
-  font-family: 'Creepster', cursive; 
-  font-size: 2.5rem;
-  color: #fff; 
+.cabecalho h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 3rem;
   margin: 0;
 }
 
-
-h1, h2 {
-  margin: 0 0 10px 0;
-}
-
-.apresentacao {
-  padding: 20px;
+.introducao, .titulo-personagens {
   max-width: 800px;
-  margin: 0 auto;
-  text-align: justify;
+  margin: 20px auto;
+  padding: 0 20px;
 }
 
-.galeria {
+.personagens {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 15px;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 15px;
   padding: 20px;
-  overflow-x: auto;
 }
 
-.card-personagem {
-  width: 140px;
-  height: 220px; 
+.personagem {
   background-color: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   padding: 10px;
+  width: 140px;
+  text-align: center;
+  cursor: pointer;
   transition: transform 0.2s;
 }
 
-.card-personagem:hover {
-  transform: translateY(-5px);
+.personagem:hover {
+  transform: scale(1.05);
 }
 
-.personagens h2 {
-  text-align: center; 
-  font-size: 1.8rem;  
-  margin-bottom: 20px; 
-  color: #333;       
-}
-
-.card-personagem img {
+.personagem img {
   width: 100%;
-  height: 120px; 
-  object-fit: cover; 
-  display: block;
-  margin-bottom: 5px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
-.card-personagem h3 {
-  margin: 5px 0;
-  font-size: 0.9rem;
-  flex-grow: 1; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.personagem p {
+  margin: 8px 0 0;
+  font-weight: bold;
+}
+
+.descricao-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  min-height: 70px;
+}
+.descricao-container h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
   text-align: center;
 }
 
-.card-personagem button {
-  background-color: #219ebc;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 4px 8px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  transition: background-color 0.2s;
-  width: 100%; 
-}
-
-.card-personagem button:hover {
-  background-color: #023047;
-}
-
-#detalhes-personagem {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-#detalhes-personagem img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 10px;
-}
-
-#detalhes-personagem h3 {
-  margin-bottom: 10px;
+.descricao {
+  font-size: 1rem;
+  color: #333;
 }
