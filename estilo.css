@@ -80,3 +80,9 @@ body {
   font-size: 1rem;
   color: #333;
 }
+footer {
+  text-align: center;        
+  border-top: 3px solid #8ecae6; 
+  padding: 10px 0;           
+  font-family: Arial, sans-serif; 
+}
