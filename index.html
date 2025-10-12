@@ -2,13 +2,14 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>O Mágico de Oz</title>
+
   <link rel="icon" href="imgs/logo.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="estilo.css" />
 </head>
 <body>
-
   <div class="cabecalho">
     <h1>O Mágico de Oz</h1>
   </div>
@@ -16,29 +17,88 @@
   <div class="introducao">
     <h2>Sobre o Filme</h2>
     <p>
-      "O Mágico de Oz" é um clássico da literatura e do cinema que conta a história de Dorothy, uma jovem do Kansas que é levada por um tornado para a mágica Terra de Oz.
-       Nessa terra fantástica, ela conhece amigos especiais e juntos embarcam em uma jornada para encontrar o Mágico de Oz, enfrentando desafios e aprendendo sobre amizade, coragem e esperança.
+      “O Mágico de Oz” é um clássico do cinema que conta a história de Dorothy Gale, uma jovem corajosa e sonhadora do Kansas. Sua vida muda completamente quando um tornado a leva para a mágica Terra de Oz, um lugar cheio de cores, encantos e desafios inesperados.
+No filme, acompanhamos a jornada de Dorothy enquanto ela enfrenta obstáculos e busca voltar para casa. A história mistura aventura, fantasia e música, transmitindo mensagens sobre coragem, esperança e a importância de acreditar em si mesmo.
+“O Mágico de Oz” conquistou gerações com sua magia, suas lições de vida e a força da protagonista, mostrando que, mesmo diante de dificuldades, a determinação e o coração podem levar alguém de volta ao que realmente importa.
     </p>
   </div>
 
-  <div class="titulo-personagens">
-    <h2>Personagens</h2>
+<div class="personagens">
+  <div class="personagem" onmouseover="mostrarDescricao(this)">
+    <img src="imgs/Dorothy Gale (Judy Garland).jpg" alt="Dorothy Gale">
+    <h3>Dorothy Gale</h3>
+    <p>Dorothy é uma jovem corajosa e sonhadora que vive no Kansas com seus tios. Com seu cãozinho Totó, enfrenta desafios mostrando bondade e esperança.</p>
   </div>
 
-  <div class="personagens"></div>
-
-  <div class="descricao-container">
-    <h3>Descrição dos Personagens</h3>
-    <p class="descricao"></p>
+  <div class="personagem" onmouseover="mostrarDescricao(this)">
+    <img src="imgs/espantalhoo.jpg" alt="Espantalho">
+    <h3>Espantalho</h3>
+    <p>O Espantalho é feito de palha e acredita não ter cérebro, mas mostra grande sabedoria e criatividade.</p>
   </div>
-<footer>
-  <p>Anna Clara Freitas Bento
- <a href="https://github.com/annacclaraf" target="_blank" rel="noopener noreferrer">
-  Github
- </a>.
-</p>
-</footer>
-<script src="magicodOZ.js" defer></script>
 
+  <div class="personagem" onmouseover="mostrarDescricao(this)">
+    <img src="imgs/homemdelatajpg.jpg" alt="Homem de Lata">
+    <h3>Homem de Lata</h3>
+    <p>Um lenhador transformado em lata, deseja ter um coração para sentir emoções e amar verdadeiramente.</p>
+  </div>
+
+  <div class="personagem" onmouseover="mostrarDescricao(this)">
+    <img src="imgs/leao.jpg" alt="Leão Covarde">
+    <h3>Leão Covarde</h3>
+    <p>O Leão Covarde busca coragem, mas prova sua bravura em muitos momentos da aventura.</p>
+  </div>
+
+  <div class="personagem" onmouseover="mostrarDescricao(this)">
+    <img src="imgs/Margaret Hamilton.jpg" alt="Bruxa Má do Oeste">
+    <h3>Bruxa Má do Oeste</h3>
+    <p>A poderosa e cruel Bruxa Má do Oeste tenta impedir Dorothy e seus amigos de alcançarem seus objetivos.</p>
+  </div>
+
+  <div class="personagem" onmouseover="mostrarDescricao(this)">
+    <img src="imgs/glinda.jpg" alt="Glinda">
+    <h3>Glinda</h3>
+    <p>Glinda é a bondosa Bruxa do Sul, sábia e gentil, que ajuda Dorothy a encontrar o caminho de volta para casa.</p>
+  </div>
+
+  <div class="personagem" onmouseover="mostrarDescricao(this)">
+    <img src="imgs/toto.jpg" alt="Totó">
+    <h3>Totó</h3>
+    <p>Totó é o fielcompanheiro de Dorothy, corajoso e leal, que a acompanha em todas as aventuras.</p>
+  </div>
+</div>
+
+  <section class="biografia">
+    <div class="bio-conteudo">
+      <img src="imgs/anna.jpeg" alt="Anna Clara" class="foto-bio">
+      <div class="texto-bio">
+        <h2>Sobre Mim</h2>
+        <p>
+          Meu nome é <strong>Anna Clara Freitas Bento</strong>, tenho 16 anos e nasci em Patrocínio, Minas Gerais. 
+          Atualmente, estou cursando o ensino médio integrado ao curso técnico em Informática no Instituto Federal do Triângulo Mineiro (IFTM) – Campus Patrocínio.
+        </p>
+        <p>
+          Apesar de estar na área da Informática, minha verdadeira paixão é a <strong>Odontologia</strong>. 
+          É nesse campo que desejo construir minha carreira, pois sempre tive o sonho de cuidar das pessoas e contribuir com a saúde e o bem-estar delas. 
+          Amo estar perto da minha família e dos meus amigos, e acredito que o apoio deles é essencial para o meu crescimento pessoal e acadêmico.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="informacoes-autora">
+      <p>Feito por <strong>Anna Clara Freitas Bento</strong></p>
+      <div class="links-sociais">
+        <a href="https://github.com/annacclaraf" target="_blank" title="GitHub">
+          <img src="imgs/github.png" alt="GitHub">
+        </a>
+        <a href="https://www.instagram.com/annacclaraf" target="_blank" title="Instagram">
+          <img src="imgs/instagram.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="magicodOZ.js"></script>
 </body>
 </html>
+
